@@ -6,4 +6,8 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface MemberRepository extends JpaRepository<Member,Long> {
+
+    public boolean existsByCpf(String cpf);
+
+    public boolean existsByCpfAndWhatsApp(String cpf,String whatsApp);
 }
