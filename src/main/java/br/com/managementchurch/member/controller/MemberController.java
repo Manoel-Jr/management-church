@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/members")
+@RequestMapping("/api/members")
 @AllArgsConstructor
 public class MemberController {
 
@@ -30,7 +30,7 @@ public class MemberController {
 
     @GetMapping
     public ResponseEntity<List<MemberResponse>> getAll(){
-        return new ResponseEntity<>(service.getAll(), HttpStatus.OK);
+        return new ResponseEntity<>(service.getAll(), HttpStatus.CREATED);
     }
 
     @PutMapping("/{id}")

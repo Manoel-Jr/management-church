@@ -1,16 +1,22 @@
 package br.com.managementchurch.member.model.dto.request;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import br.com.managementchurch.member.gender.GenderEnum;
+import lombok.*;
 
-@Data
+import java.time.LocalDate;
+
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 public class MemberUpdateRequest {
 
     private Long id;
-    private String name;
-    private String cpf;
+    private String fullName;
+    private String email;
     private String whatsApp;
+    private LocalDate dateOfBirth;
+    private LocalDate accessionDate;
+    private AddressRequest address;
+    private GenderEnum gender;
 }
